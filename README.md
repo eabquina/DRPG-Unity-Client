@@ -7,3 +7,4 @@ A Unity client for the Drupal Role Playing Game (DRPG) module.
 ## Textures
 
 - [Medieval Floor texture by borjae](http://opengameart.org/content/medieval-floor)
+- [william_wall_01 by Duion](http://opengameart.org/content/williamwall01)
