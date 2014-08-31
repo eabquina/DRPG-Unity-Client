@@ -9,6 +9,10 @@ A Unity client for the Drupal Role Playing Game (DRPG) module.
 - [Medieval Floor texture by borjae](http://opengameart.org/content/medieval-floor)
 - [william_wall_01 by Duion](http://opengameart.org/content/williamwall01)
 
+### Models
+
+- [Simple Jail Door by Anonymous](http://opengameart.org/content/simple-jail-door)
+
 ## License
 
 All code is released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
