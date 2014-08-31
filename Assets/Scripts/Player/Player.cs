@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
+	private PlayerMovement playerMovement;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	void Awake()
+	{
+		this.playerMovement = (PlayerMovement) this.gameObject.GetComponent("PlayerMovement");
 	}
 }
