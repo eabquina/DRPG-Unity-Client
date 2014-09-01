@@ -152,6 +152,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1497387741}
+  - 114: {fileID: 1497387743}
+  - 114: {fileID: 1497387742}
   m_Layer: 0
   m_Name: Loader
   m_TagString: Untagged
@@ -171,6 +173,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1497387742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497387740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51616ef3bc86d0341bada9c09e80a81d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1497387743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1497387740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3fa3b0d65195246b1386ec090cfaeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1827780832
 GameObject:
   m_ObjectHideFlags: 0
