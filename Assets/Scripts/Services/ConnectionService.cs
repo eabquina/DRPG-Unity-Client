@@ -31,6 +31,10 @@ public class ConnectionService : WebService
 
 			// Store server.
 			PlayerPrefs.SetString("server", this.server);
+
+			// Store session.
+			PlayerPrefs.SetString("sessionName", response.session_name);
+			PlayerPrefs.SetString("sessionId", response.sessid);
 			
 			base.HandleSuccess(webRequest);
 		}

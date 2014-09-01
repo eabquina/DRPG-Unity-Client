@@ -11,6 +11,8 @@ public class WebService : MonoBehaviour
 	public FailureResponseHandler failureResponseHandler;
 
 	protected string server;
+	protected string sessionName;
+	protected string sessionId;
 
 	void Awake()
 	{
@@ -18,13 +20,38 @@ public class WebService : MonoBehaviour
 		{
 			this.server = PlayerPrefs.GetString("server");
 		}
+
+		if (PlayerPrefs.HasKey("sessionName"))
+		{
+			this.sessionName = PlayerPrefs.GetString("sessionName");
+		}
+
+		if (PlayerPrefs.HasKey("sessionId"))
+		{
+			this.sessionId = PlayerPrefs.GetString("sessionId");
+		}
+	}
+
+	protected Dictionary<string, string> GetRequestHeaders()
+	{
+		Dictionary<string, string> headers = new Dictionary<string, string>();
+
+		if ((this.sessionId != null) && (this.sessionId.Length > 0))
+		{
+			string cookie = this.sessionName + "=" + this.sessionId;
+
+			Debug.Log("Setting request header: Cookie = " + cookie);
+			headers.Add("Cookie", cookie);
+		}
+
+		return headers;
 	}
 	
 	protected void MakeRequest(string url)
 	{
 		Debug.Log("Web request: " + url);
-		
-		WWW webRequest = new WWW(url);
+
+		WWW webRequest = new WWW(url, null, this.GetRequestHeaders());
 		
 		StartCoroutine(WaitForResponse(webRequest));
 	}
@@ -34,7 +61,13 @@ public class WebService : MonoBehaviour
 		Debug.Log("Web request: " + url);
 		
 		WWWForm form = new WWWForm();
-		
+		Dictionary<string, string> headers = this.GetRequestHeaders();
+
+		foreach (string key in headers.Keys)
+		{
+			form.headers.Add(key, headers[key]);
+		}
+
 		foreach (string key in parameters.Keys)
 		{
 			form.AddField(key, parameters[key]);
