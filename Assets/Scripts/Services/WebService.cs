@@ -9,6 +9,16 @@ public class WebService : MonoBehaviour
 	
 	public SuccessResponseHandler successResponseHandler;
 	public FailureResponseHandler failureResponseHandler;
+
+	protected string server;
+
+	void Awake()
+	{
+		if (PlayerPrefs.HasKey("server"))
+		{
+			this.server = PlayerPrefs.GetString("server");
+		}
+	}
 	
 	protected void MakeRequest(string url)
 	{

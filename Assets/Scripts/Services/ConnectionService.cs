@@ -9,6 +9,8 @@ public class ConnectionService : WebService
 	{
 		Debug.Log("Connecting to server at: " + server);
 
+		this.server = server;
+
 		Dictionary<string, string> parameters = new Dictionary<string, string>();
 		
 		parameters.Add("username", username);
@@ -26,6 +28,9 @@ public class ConnectionService : WebService
 		if (response.sessid.Length > 0)
 		{
 			Debug.Log("Connected to server.");
+
+			// Store server.
+			PlayerPrefs.SetString("server", this.server);
 			
 			base.HandleSuccess(webRequest);
 		}
