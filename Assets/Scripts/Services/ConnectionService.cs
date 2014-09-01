@@ -14,16 +14,16 @@ public class ConnectionService : WebService
 		parameters.Add("username", username);
 		parameters.Add("password", password);
 		
-		this.MakeRequest(server + "/user/login", parameters);
+		this.MakeRequest(server + "drpg_rest/user/login", parameters);
 	}
 	
 	protected override void HandleSuccess(WWW webRequest)
 	{
 		Debug.Log(webRequest.text);
 		
-		WebServiceResponseModel response = JsonMapper.ToObject<WebServiceResponseModel>(webRequest.text);
+		ConnectionServiceResponseModel response = JsonMapper.ToObject<ConnectionServiceResponseModel>(webRequest.text);
 		
-		if (response.success)
+		if (response.sessid.Length > 0)
 		{
 			Debug.Log("Connected to server.");
 			
@@ -31,8 +31,6 @@ public class ConnectionService : WebService
 		}
 		else
 		{
-			Debug.LogError(response.message);
-			
 			this.failureResponseHandler(webRequest);
 		}
 	}

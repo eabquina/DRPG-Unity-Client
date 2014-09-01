@@ -2,8 +2,6 @@
 
 public class WebServiceResponseModel
 {
-	public bool success;
-	public string message;
-	public int timestamp;
-	public Dictionary<string, object> data;
+	public bool success { get; set; }
+	public int timestamp { get; set; }
 }

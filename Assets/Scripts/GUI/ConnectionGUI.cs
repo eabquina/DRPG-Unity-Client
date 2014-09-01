@@ -4,9 +4,9 @@ using LitJson;
 
 public class ConnectionGUI : MonoBehaviour
 {
-	private string server = "http://";
-	private string username = "";
-	private string password = "";
+	private string server = "http://310db815.ngrok.com";
+	private string username = "admin";
+	private string password = "admin";
 
 	private ConnectionService connectionService;
 
@@ -60,6 +60,11 @@ public class ConnectionGUI : MonoBehaviour
 	{
 		string server = this.server.Trim();
 		string username = this.username.Trim();
+
+		if (!server.EndsWith("/"))
+		{
+			server += "/";
+		}
 		
 		this.connectionService.Connect(server, username, this.password);
 	}
@@ -67,19 +72,12 @@ public class ConnectionGUI : MonoBehaviour
 	void HandleConnectionSuccess(WWW webRequest)
 	{
 		Debug.Log("Service connection successful.");
-		
-		Debug.Log(webRequest.text);
 
-		// TODO: Store player data locally.
-		WebServiceResponseModel response = JsonMapper.ToObject<WebServiceResponseModel>(webRequest.text);
-		
 		Application.LoadLevel("EntryScene");
 	}
 	
 	void HandleConnectionFailure(WWW webRequest)
 	{
 		Debug.LogWarning("Service connection failed.");
-		
-		Debug.Log(webRequest.text);
 	}
 }
