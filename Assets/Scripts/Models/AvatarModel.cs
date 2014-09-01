@@ -1,4 +1,7 @@
-﻿public class AvatarModel : DataModel
+﻿//using System.Collections;
+//using System.Collections.Generic;
+
+public class AvatarModel : DataModel
 {
 	public int avatar_id { get; set; }
 	public int owner_uid { get; set; }
@@ -7,5 +10,5 @@
 	public int hp { get; set; }
 	public int created { get; set; }
 	public int updated { get; set; }
-	public object rdf_mapping { get; set; }
+	public string[] rdf_mapping { get; set; }
 }
