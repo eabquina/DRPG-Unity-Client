@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
 				Debug.Log("Clicked Ground at point:");
 				Debug.Log(this.raycastHit.point);
 
-				this.target = new Vector3(this.raycastHit.point.x, this.gameObject.transform.position.y, this.raycastHit.point.z);
+				this.SetNewMoveTarget(new Vector3(this.raycastHit.point.x, this.gameObject.transform.position.y, this.raycastHit.point.z));
 			}
 		}
 
@@ -35,5 +35,12 @@ public class PlayerMovement : MonoBehaviour
 			float step = (this.speed * Time.deltaTime);
 			this.gameObject.transform.position = Vector3.MoveTowards(this.gameObject.transform.position, this.target, step);
 		}
+	}
+
+	private void SetNewMoveTarget(Vector3 target)
+	{
+		this.target = target;
+
+		this.gameObject.transform.LookAt(target);
 	}
 }
