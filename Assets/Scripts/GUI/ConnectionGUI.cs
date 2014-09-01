@@ -4,7 +4,7 @@ using LitJson;
 
 public class ConnectionGUI : MonoBehaviour
 {
-	private string server = "http://310db815.ngrok.com";
+	private string server = "http://";
 	private string username = "admin";
 	private string password = "admin";
 
@@ -12,6 +12,11 @@ public class ConnectionGUI : MonoBehaviour
 
 	void Awake()
 	{
+		if (PlayerPrefs.HasKey("server"))
+		{
+			this.server = PlayerPrefs.GetString("server");
+		}
+
 		this.connectionService = (ConnectionService) this.gameObject.GetComponent("ConnectionService");
 
 		if (this.connectionService != null)
@@ -73,7 +78,7 @@ public class ConnectionGUI : MonoBehaviour
 	{
 		Debug.Log("Service connection successful.");
 
-		Application.LoadLevel("EntryScene");
+		Application.LoadLevel("LoadScene");
 	}
 	
 	void HandleConnectionFailure(WWW webRequest)
