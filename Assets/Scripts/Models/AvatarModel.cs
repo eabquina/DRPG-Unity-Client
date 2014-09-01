@@ -1,7 +1,4 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-
-public class AvatarModel : DataModel
+﻿public class AvatarModel
 {
 	public int avatar_id { get; set; }
 	public int owner_uid { get; set; }
