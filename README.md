@@ -13,6 +13,10 @@ A Unity client for the Drupal Role Playing Game (DRPG) module.
 
 - [Simple Jail Door by Anonymous](http://opengameart.org/content/simple-jail-door)
 
+### Fonts
+
+- [Diablo Heavy](http://fontzone.net/font-details/diablo-heavy)
+
 ## License
 
 All code is released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
