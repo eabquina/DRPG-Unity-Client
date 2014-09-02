@@ -1,6 +1,6 @@
 # DRPG Unity Client
 
-A Unity client for the Drupal Role Playing Game (DRPG) module.
+A Unity client for the [Drupal Role Playing Game](https://github.com/ruscoe/DRPG) (DRPG) module.
 
 ## Credits
 
