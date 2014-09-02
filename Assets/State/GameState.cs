@@ -18,6 +18,7 @@ public class GameState : MonoBehaviour
 
 			if (avatar != null)
 			{
+				this.player.Name = avatar.label;
 				this.player.XP = avatar.xp;
 				this.player.HP = avatar.hp;
 			}
