@@ -40,6 +40,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400004}
+  - 114: {fileID: 11400002}
   m_Layer: 5
   m_Name: HPIndicator
   m_TagString: Untagged
@@ -89,6 +90,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400010}
+  - 114: {fileID: 11400000}
   m_Layer: 5
   m_Name: XPIndicator
   m_TagString: Untagged
@@ -138,6 +140,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400016}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: NameIndicator
   m_TagString: Untagged
@@ -466,6 +469,42 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df38d9a23fed224db94eaa41425fd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: {fileID: 10200004}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7deebe806f4f2184883a48e2140c9abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: {fileID: 10200000}
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ebdf9d22d91810448335e7d75067575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: {fileID: 10200008}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
