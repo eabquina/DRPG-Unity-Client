@@ -21,6 +21,9 @@ public class AvatarService : WebService
 		if (response.success)
 		{
 			Debug.Log("Got avatar.");
+
+			// Store avatar.
+			PlayerPrefs.SetString("avatar", JsonMapper.ToJson(response.avatar));
 			
 			base.HandleSuccess(webRequest);
 		}
