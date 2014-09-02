@@ -53,7 +53,7 @@ public class ConnectionGUI : MonoBehaviour
 
 		GUILayout.BeginHorizontal("box");
 		GUILayout.Label("Password:");
-		this.password = GUILayout.TextField(this.password, 255);
+		this.password = GUILayout.PasswordField(this.password, '*', 255);
 		GUILayout.EndHorizontal();
 
 		if (GUILayout.Button("Connect!"))
