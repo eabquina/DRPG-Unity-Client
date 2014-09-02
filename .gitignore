@@ -1,8 +1,6 @@
 .DS_Store
 Library
 Temp
-Assets/spine-csharp*
-Assets/spine-unity*
 *.csproj
 *.pidb
 *.unityproj
