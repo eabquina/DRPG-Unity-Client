@@ -5,8 +5,8 @@ using LitJson;
 public class ConnectionGUI : MonoBehaviour
 {
 	private string server = "http://";
-	private string username = "admin";
-	private string password = "admin";
+	private string username = "";
+	private string password = "";
 
 	private ConnectionService connectionService;
 
@@ -15,6 +15,11 @@ public class ConnectionGUI : MonoBehaviour
 		if (PlayerPrefs.HasKey("server"))
 		{
 			this.server = PlayerPrefs.GetString("server");
+		}
+
+		if (PlayerPrefs.HasKey("username"))
+		{
+			this.username = PlayerPrefs.GetString("username");
 		}
 
 		this.connectionService = (ConnectionService) this.gameObject.GetComponent("ConnectionService");
