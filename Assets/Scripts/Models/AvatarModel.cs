@@ -1,4 +1,4 @@
-﻿public class AvatarModel
+﻿public class AvatarModel : DataModel
 {
 	public int avatar_id { get; set; }
 	public int owner_uid { get; set; }
