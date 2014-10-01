@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
 
 	protected virtual void RaiseUpdateEvent()
 	{
-		Debug.Log("Updated player stats. XP: " + this.xp + ", HP: " + this.hp);
+		Debug.Log("Updated player stats. Name: " + this.name + ", XP: " + this.xp + ", HP: " + this.hp);
 
 		if (UpdateEvent != null)
 		{
