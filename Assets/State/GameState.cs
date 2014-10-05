@@ -56,6 +56,11 @@ public class GameState : MonoBehaviour
 		this.events.Add(eventModel);
 	}
 
+	public void SendEvents()
+	{
+		this.eventService.SendEvents(this.events);
+	}
+
 	public void PopulateRoomContainers(WWW webRequest)
 	{
 		RoomModel room = JsonMapper.ToObject<RoomModel>(PlayerPrefs.GetString("room"));
