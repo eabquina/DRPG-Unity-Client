@@ -1,0 +1,126 @@
+{
+    "room": {
+        "room_id": 1,
+        "label": "Room 1",
+        "item_container_quantity": 4,
+        "created": 1412433456,
+        "updated": 1412433456,
+        "item_containers": [
+            {
+                "item_container_id": 2,
+                "label": "Common Container",
+                "item_quantity": 2,
+                "item_rarity": 0,
+                "item_rarity_operator": ">",
+                "created": 1412433385,
+                "updated": 1412433385,
+                "items": [
+                    {
+                        "item_id": 3,
+                        "label": "Common Sword",
+                        "rarity": 1,
+                        "created": 1412433358,
+                        "updated": 1412433358,
+                        "rdf_mapping": []
+                    },
+                    {
+                        "item_id": 2,
+                        "label": "Rare Sword",
+                        "rarity": 5,
+                        "created": 1412433342,
+                        "updated": 1412433342,
+                        "rdf_mapping": []
+                    }
+                ],
+                "rdf_mapping": []
+            },
+            {
+                "item_container_id": 2,
+                "label": "Common Container",
+                "item_quantity": 2,
+                "item_rarity": 0,
+                "item_rarity_operator": ">",
+                "created": 1412433385,
+                "updated": 1412433385,
+                "items": [
+                    {
+                        "item_id": 3,
+                        "label": "Common Sword",
+                        "rarity": 1,
+                        "created": 1412433358,
+                        "updated": 1412433358,
+                        "rdf_mapping": []
+                    },
+                    {
+                        "item_id": 2,
+                        "label": "Rare Sword",
+                        "rarity": 5,
+                        "created": 1412433342,
+                        "updated": 1412433342,
+                        "rdf_mapping": []
+                    }
+                ],
+                "rdf_mapping": []
+            },
+            {
+                "item_container_id": 2,
+                "label": "Common Container",
+                "item_quantity": 2,
+                "item_rarity": 0,
+                "item_rarity_operator": ">",
+                "created": 1412433385,
+                "updated": 1412433385,
+                "items": [
+                    {
+                        "item_id": 3,
+                        "label": "Common Sword",
+                        "rarity": 1,
+                        "created": 1412433358,
+                        "updated": 1412433358,
+                        "rdf_mapping": []
+                    },
+                    {
+                        "item_id": 2,
+                        "label": "Rare Sword",
+                        "rarity": 5,
+                        "created": 1412433342,
+                        "updated": 1412433342,
+                        "rdf_mapping": []
+                    }
+                ],
+                "rdf_mapping": []
+            },
+            {
+                "item_container_id": 2,
+                "label": "Common Container",
+                "item_quantity": 2,
+                "item_rarity": 0,
+                "item_rarity_operator": ">",
+                "created": 1412433385,
+                "updated": 1412433385,
+                "items": [
+                    {
+                        "item_id": 3,
+                        "label": "Common Sword",
+                        "rarity": 1,
+                        "created": 1412433358,
+                        "updated": 1412433358,
+                        "rdf_mapping": []
+                    },
+                    {
+                        "item_id": 2,
+                        "label": "Rare Sword",
+                        "rarity": 5,
+                        "created": 1412433342,
+                        "updated": 1412433342,
+                        "rdf_mapping": []
+                    }
+                ],
+                "rdf_mapping": []
+            }
+        ],
+        "rdf_mapping": []
+    },
+    "success": true,
+    "timestamp": 1412433616
+}
