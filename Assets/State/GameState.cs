@@ -88,7 +88,7 @@ public class GameState : MonoBehaviour
 		}
 		else
 		{
-			Debug.LogWarning("Started game with no room date for room ID: " + this.roomId);
+			Debug.LogWarning("Started game with no room data for room ID: " + this.roomId);
 		}
 	}
 }
