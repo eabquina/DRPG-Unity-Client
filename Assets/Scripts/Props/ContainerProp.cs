@@ -7,6 +7,15 @@ public class ContainerProp : InteractiveProp
 
 	public override void HandleInteraction()
 	{
-		// TODO: Open inventory.
+		if (this.itemContainer != null)
+		{
+			Debug.Log("Item Container: " + this.itemContainer.label);
+
+			// TODO: Open inventory.
+		}
+		else
+		{
+			Debug.LogWarning("Container Prop has no Item Container model.");
+		}
 	}
 }
