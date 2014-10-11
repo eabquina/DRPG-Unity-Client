@@ -21,8 +21,10 @@ public class ContainerItemsGUI : MonoBehaviour
 	private void CreateItemSlot(ItemModel item)
 	{
 		ItemSlotGUI itemSlot = (ItemSlotGUI) Instantiate(this.itemSlotPrefab,
-			this.itemSlotPrefab.transform.position,
+			this.itemSlotPrefab.transform.position - new Vector3(0, 0, 1),
 			this.itemSlotPrefab.transform.rotation);
+
+		itemSlot.gameObject.transform.parent = this.gameObject.transform;
 		
 		itemSlot.SetItem(item);
 
