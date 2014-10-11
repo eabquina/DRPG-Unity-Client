@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSlotPrefab: {fileID: 11400000, guid: 90e7899043aff994d80f9810f0aec288, type: 2}
+  itemSlotPadding: .699999988
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
