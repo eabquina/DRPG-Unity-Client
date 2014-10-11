@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ContainerProp : InteractiveProp
 {
+	public ContainerItemsGUI guiPrefab;
+
 	public ItemContainerModel itemContainer;
 
 	public override void HandleInteraction()
@@ -11,7 +13,11 @@ public class ContainerProp : InteractiveProp
 		{
 			Debug.Log("Item Container: " + this.itemContainer.label);
 
-			// TODO: Open inventory.
+			ContainerItemsGUI gui = (ContainerItemsGUI) Instantiate(this.guiPrefab,
+				this.guiPrefab.transform.position,
+				this.guiPrefab.transform.rotation);
+
+			gui.SetItems(this.itemContainer.items);
 		}
 		else
 		{
