@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ContainerItemsGUI : MonoBehaviour
+public class ContainerItemsGUI : DialogGUI
 {
 	public ItemSlotGUI itemSlotPrefab;
 
