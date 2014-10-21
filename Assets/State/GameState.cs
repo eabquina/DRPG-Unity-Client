@@ -5,6 +5,9 @@ using LitJson;
 
 public class GameState : MonoBehaviour
 {
+	public delegate void UpdateEventHandler(object sender);
+	public event UpdateEventHandler UpdateEvent;
+
 	public int roomId;
 	public ContainerProp containerPrefab;
 
@@ -20,6 +23,8 @@ public class GameState : MonoBehaviour
 		this.player = (Player) GameObject.FindGameObjectWithTag("Player").GetComponent("Player");
 
 		this.eventService = (EventService) this.gameObject.GetComponent("EventService");
+		this.eventService.successResponseHandler = new WebService.SuccessResponseHandler(this.HandleSendEventsSuccess);
+
 		this.roomService = (RoomService) this.gameObject.GetComponent("RoomService");
 
 		if (PlayerPrefs.HasKey("avatar"))
@@ -54,6 +59,8 @@ public class GameState : MonoBehaviour
 		eventModel.arguments = arguments;
 
 		this.events.Add(eventModel);
+
+		this.RaiseUpdateEvent();
 	}
 
 	public void SendEvents()
@@ -94,6 +101,19 @@ public class GameState : MonoBehaviour
 		else
 		{
 			Debug.LogWarning("Started game with no room data for room ID: " + this.roomId);
+		}
+	}
+
+	private void HandleSendEventsSuccess(WWW webRequest)
+	{
+		this.events.Clear();
+	}
+
+	private void RaiseUpdateEvent()
+	{
+		if (UpdateEvent != null)
+		{
+			UpdateEvent(this);
 		}
 	}
 }
