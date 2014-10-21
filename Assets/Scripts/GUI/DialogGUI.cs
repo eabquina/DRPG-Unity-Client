@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DialogGUI : MonoBehaviour
+public class DialogGUI : GUI
 {
-	protected virtual void Close()
+	public virtual void Close()
 	{
 		GameObject.Destroy(this.gameObject);
 	}
