@@ -1,0 +1,35 @@
+{
+    "avatar": {
+        "avatar_id": 1,
+        "owner_uid": 1,
+        "label": "Roggard the Hunter",
+        "currency": 100,
+        "created": 1414222757,
+        "updated": 1414223862,
+        "attributes": {
+            "1": {
+                "attribute_id": 1,
+                "type": "drpg_avatar",
+                "entity_id": 1,
+                "attribute_name": "hp",
+                "value": 100,
+                "created": 1414652039,
+                "updated": 1414652039,
+                "rdf_mapping": []
+            },
+            "2": {
+                "attribute_id": 2,
+                "type": "drpg_avatar",
+                "entity_id": 1,
+                "attribute_name": "xp",
+                "value": 50,
+                "created": 1414652048,
+                "updated": 1414652048,
+                "rdf_mapping": []
+            }
+        },
+        "rdf_mapping": []
+    },
+    "success": true,
+    "timestamp": 1414652054
+}

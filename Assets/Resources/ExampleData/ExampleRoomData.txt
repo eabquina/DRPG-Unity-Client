@@ -1,126 +1,131 @@
 {
     "room": {
         "room_id": 1,
-        "label": "Room 1",
-        "item_container_quantity": 4,
-        "created": 1412433456,
-        "updated": 1412433456,
+        "label": "Main Room",
+        "item_container_quantity": 2,
+        "created": 1414223129,
+        "updated": 1414651525,
         "item_containers": [
             {
-                "item_container_id": 2,
-                "label": "Common Container",
+                "item_container_id": 1,
+                "label": "Common Loot Chest",
                 "item_quantity": 2,
-                "item_rarity": 0,
-                "item_rarity_operator": ">",
-                "created": 1412433385,
-                "updated": 1412433385,
+                "item_rarity": 5,
+                "item_rarity_operator": "<=",
+                "created": 1414222757,
+                "updated": 1414222757,
                 "items": [
                     {
-                        "item_id": 3,
-                        "label": "Common Sword",
-                        "rarity": 1,
-                        "created": 1412433358,
-                        "updated": 1412433358,
+                        "item_id": 2,
+                        "label": "Wooden Bow",
+                        "rarity": 3,
+                        "equippable": 0,
+                        "created": 1414222757,
+                        "updated": 1414222757,
                         "rdf_mapping": []
                     },
                     {
-                        "item_id": 2,
-                        "label": "Rare Sword",
-                        "rarity": 5,
-                        "created": 1412433342,
-                        "updated": 1412433342,
+                        "item_id": 1,
+                        "label": "Wooden Sword of Mild Discomfort",
+                        "rarity": 1,
+                        "equippable": 0,
+                        "created": 1414222757,
+                        "updated": 1414222757,
                         "rdf_mapping": []
+                    }
+                ],
+                "item_instances": [
+                    {
+                        "item_instance_id": 1,
+                        "type": "drpg_avatar",
+                        "entity_id": 1,
+                        "item_id": 2,
+                        "created": 1414652211,
+                        "updated": 1414652211
+                    },
+                    {
+                        "item_instance_id": 2,
+                        "type": "drpg_avatar",
+                        "entity_id": 1,
+                        "item_id": 1,
+                        "created": 1414652211,
+                        "updated": 1414652211
                     }
                 ],
                 "rdf_mapping": []
             },
             {
                 "item_container_id": 2,
-                "label": "Common Container",
-                "item_quantity": 2,
-                "item_rarity": 0,
+                "label": "Rare Loot Chest",
+                "item_quantity": 1,
+                "item_rarity": 5,
                 "item_rarity_operator": ">",
-                "created": 1412433385,
-                "updated": 1412433385,
+                "created": 1414222757,
+                "updated": 1414222757,
                 "items": [
                     {
-                        "item_id": 3,
-                        "label": "Common Sword",
-                        "rarity": 1,
-                        "created": 1412433358,
-                        "updated": 1412433358,
-                        "rdf_mapping": []
-                    },
-                    {
-                        "item_id": 2,
-                        "label": "Rare Sword",
-                        "rarity": 5,
-                        "created": 1412433342,
-                        "updated": 1412433342,
+                        "item_id": 5,
+                        "label": "Staff of Fire",
+                        "rarity": 10,
+                        "equippable": 0,
+                        "created": 1414222757,
+                        "updated": 1414222757,
                         "rdf_mapping": []
                     }
                 ],
-                "rdf_mapping": []
-            },
-            {
-                "item_container_id": 2,
-                "label": "Common Container",
-                "item_quantity": 2,
-                "item_rarity": 0,
-                "item_rarity_operator": ">",
-                "created": 1412433385,
-                "updated": 1412433385,
-                "items": [
+                "item_instances": [
                     {
-                        "item_id": 3,
-                        "label": "Common Sword",
-                        "rarity": 1,
-                        "created": 1412433358,
-                        "updated": 1412433358,
-                        "rdf_mapping": []
-                    },
-                    {
-                        "item_id": 2,
-                        "label": "Rare Sword",
-                        "rarity": 5,
-                        "created": 1412433342,
-                        "updated": 1412433342,
-                        "rdf_mapping": []
-                    }
-                ],
-                "rdf_mapping": []
-            },
-            {
-                "item_container_id": 2,
-                "label": "Common Container",
-                "item_quantity": 2,
-                "item_rarity": 0,
-                "item_rarity_operator": ">",
-                "created": 1412433385,
-                "updated": 1412433385,
-                "items": [
-                    {
-                        "item_id": 3,
-                        "label": "Common Sword",
-                        "rarity": 1,
-                        "created": 1412433358,
-                        "updated": 1412433358,
-                        "rdf_mapping": []
-                    },
-                    {
-                        "item_id": 2,
-                        "label": "Rare Sword",
-                        "rarity": 5,
-                        "created": 1412433342,
-                        "updated": 1412433342,
-                        "rdf_mapping": []
+                        "item_instance_id": 3,
+                        "type": "drpg_avatar",
+                        "entity_id": 1,
+                        "item_id": 5,
+                        "created": 1414652211,
+                        "updated": 1414652211
                     }
                 ],
                 "rdf_mapping": []
             }
         ],
+        "npcs": [
+            {
+                "npc_id": 1,
+                "type": "enemy",
+                "label": "Random Enemy",
+                "created": 1414222780,
+                "updated": 1414651507,
+                "rdf_mapping": []
+            }
+        ],
+        "npc_instances": [
+            {
+                "npc_instance_id": 1,
+                "type": "drpg_avatar",
+                "entity_id": 1,
+                "npc_id": 1,
+                "created": 1414652211,
+                "updated": 1414652211,
+                "attributes": null
+            }
+        ],
+        "drpg_item_container_reference": {
+            "und": [
+                {
+                    "target_id": 1
+                },
+                {
+                    "target_id": 2
+                }
+            ]
+        },
+        "drpg_npc_reference": {
+            "und": [
+                {
+                    "target_id": 1
+                }
+            ]
+        },
         "rdf_mapping": []
     },
     "success": true,
-    "timestamp": 1412433616
+    "timestamp": 1414652211
 }
