@@ -7,9 +7,23 @@ public class AvatarService : WebService
 {
 	public void GetActiveAvatar()
 	{
-		Debug.Log("Getting user's active avatar.");
+		if (PlayerPrefs.GetInt("offline") == 1)
+		{
+			TextAsset jsonAsset = (TextAsset) Resources.Load("ExampleData/ExampleAvatarData", typeof(TextAsset));
+			AvatarServiceResponseModel response = JsonMapper.ToObject<AvatarServiceResponseModel>(jsonAsset.text);
+			PlayerPrefs.SetString("avatar", JsonMapper.ToJson(response.avatar));
+			
+			if (this.successResponseHandler != null)
+			{
+				this.successResponseHandler(null);
+			}
+		}
+		else
+		{
+			Debug.Log("Getting user's active avatar.");
 
-		this.MakeRequest(server + "drpg/data/avatar");
+			this.MakeRequest(server + "drpg/data/avatar");
+		}
 	}
 	
 	protected override void HandleSuccess(WWW webRequest)

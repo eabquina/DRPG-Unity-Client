@@ -33,6 +33,8 @@ public class ConnectionGUI : MonoBehaviour
 		{
 			Debug.LogWarning("Unable to find ConnectionService. Make sure script is attached.");
 		}
+
+		PlayerPrefs.SetInt("offline", 0);
 	}
 
 	void OnGUI()
@@ -61,6 +63,11 @@ public class ConnectionGUI : MonoBehaviour
 			this.Connect();
 		}
 
+		if (GUILayout.Button("Play offline"))
+		{
+			this.PlayOffline();
+		}
+
 		GUILayout.EndVertical();
 
 		GUILayout.EndArea();
@@ -77,6 +84,13 @@ public class ConnectionGUI : MonoBehaviour
 		}
 		
 		this.connectionService.Connect(server, username, this.password);
+	}
+
+	void PlayOffline()
+	{
+		PlayerPrefs.SetInt("offline", 1);
+
+		Application.LoadLevel("LoadScene");
 	}
 
 	void HandleConnectionSuccess(WWW webRequest)
