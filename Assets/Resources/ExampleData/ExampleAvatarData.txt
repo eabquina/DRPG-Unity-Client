@@ -6,8 +6,8 @@
         "currency": 100,
         "created": 1414222757,
         "updated": 1414223862,
-        "attributes": {
-            "1": {
+        "attributes": [
+            {
                 "attribute_id": 1,
                 "type": "drpg_avatar",
                 "entity_id": 1,
@@ -17,7 +17,7 @@
                 "updated": 1414652039,
                 "rdf_mapping": []
             },
-            "2": {
+            {
                 "attribute_id": 2,
                 "type": "drpg_avatar",
                 "entity_id": 1,
@@ -27,9 +27,9 @@
                 "updated": 1414652048,
                 "rdf_mapping": []
             }
-        },
+        ],
         "rdf_mapping": []
     },
     "success": true,
-    "timestamp": 1414652054
+    "timestamp": 1414654606
 }
