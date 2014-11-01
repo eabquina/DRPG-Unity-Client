@@ -18,7 +18,7 @@ public class GameState : MonoBehaviour
 	private EventService eventService;
 	private RoomService roomService;
 
-	void Awake()
+	void Start()
 	{
 		this.player = (Player) GameObject.FindGameObjectWithTag("Player").GetComponent("Player");
 
