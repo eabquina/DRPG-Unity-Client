@@ -107,23 +107,6 @@
                 "attributes": null
             }
         ],
-        "drpg_item_container_reference": {
-            "und": [
-                {
-                    "target_id": 1
-                },
-                {
-                    "target_id": 2
-                }
-            ]
-        },
-        "drpg_npc_reference": {
-            "und": [
-                {
-                    "target_id": 1
-                }
-            ]
-        },
         "rdf_mapping": []
     },
     "success": true,
