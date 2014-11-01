@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Player : MonoBehaviour
 	private string name;
 	private int xp;
 	private int hp;
+
+	private List<ItemModel> inventoryItems = new List<ItemModel>();
 
 	public string Name
 	{
@@ -39,6 +42,11 @@ public class Player : MonoBehaviour
 				
 				this.RaiseUpdateEvent();
 		}
+	}
+
+	public void AddInventoryItem(ItemModel item)
+	{
+		this.inventoryItems.Add(item);
 	}
 
 	protected virtual void RaiseUpdateEvent()
