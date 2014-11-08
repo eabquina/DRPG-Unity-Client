@@ -14,6 +14,8 @@ public class InventoryButtonGUI : GUI
 			this.guiPrefab.transform.position,
 			this.guiPrefab.transform.rotation);
 
+		gui.type = ItemSlotTypeConstants.ITEM_INVENTORY;
+
 		List<ItemModel> inventoryItems = this.gameState.player.GetInventoryItems();
 
 		if (inventoryItems.Count != 0)
