@@ -2,7 +2,7 @@
     "avatar": {
         "avatar_id": 1,
         "owner_uid": 1,
-        "label": "Roggard the Hunter",
+        "label": "Spitball",
         "currency": 100,
         "created": 1414222757,
         "updated": 1414223862,
