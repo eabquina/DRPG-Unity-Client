@@ -27,5 +27,7 @@ public class ItemSlotGUI : GUI
 	public void HandleSelected()
 	{
 		this.gameState.player.AddInventoryItem(this.item);
+
+		GameObject.Destroy(this.gameObject);
 	}
 }
