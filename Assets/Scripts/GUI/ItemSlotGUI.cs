@@ -4,6 +4,8 @@ using System.Collections;
 public class ItemSlotGUI : GUI
 {
 	public TextMesh nameLabel;
+
+	public string type;
 	
 	private ItemModel item;
 
@@ -26,8 +28,15 @@ public class ItemSlotGUI : GUI
 
 	public void HandleSelected()
 	{
-		this.gameState.player.AddInventoryItem(this.item);
+		if (this.type == ItemSlotTypeConstants.ITEM_INVENTORY)
+		{
+			// TODO: Equip inventory item.
+		}
+		else if (this.type == ItemSlotTypeConstants.ITEM_CONTAINER)
+		{
+			this.gameState.player.AddInventoryItem(this.item);
 
-		GameObject.Destroy(this.gameObject);
+			GameObject.Destroy(this.gameObject);
+		}
 	}
 }
