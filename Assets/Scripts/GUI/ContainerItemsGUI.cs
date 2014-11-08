@@ -7,6 +7,8 @@ public class ContainerItemsGUI : DialogGUI
 	public ItemSlotGUI itemSlotPrefab;
 
 	public float itemSlotPadding = 0.7f;
+
+	public string type;
 	
 	private List<ItemSlotGUI> itemSlots = new List<ItemSlotGUI>();
 
@@ -28,7 +30,8 @@ public class ContainerItemsGUI : DialogGUI
 			this.itemSlotPrefab.transform.rotation);
 
 		itemSlot.gameObject.transform.parent = this.gameObject.transform;
-		
+
+		itemSlot.type = this.type;
 		itemSlot.SetItem(item);
 
 		this.itemSlots.Add(itemSlot);
