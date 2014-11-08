@@ -33,7 +33,9 @@ public class TitleSpawnObject : MonoBehaviour
 			float xPos = (Random.Range(0, 100) <= 50) ? this.leftX : this.rightX;
 			
 			Instantiate(this.spawnPrefab,
-				new Vector3(xPos, Random.Range(this.minY, this.maxY), 0),
+				new Vector3(xPos,
+			    	Random.Range(this.minY, this.maxY),
+			    	this.spawnPrefab.transform.position.z),
 				this.spawnPrefab.transform.rotation);
 		}
 	}
