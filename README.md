@@ -19,6 +19,6 @@ A Unity client for the [Drupal Role Playing Game](https://github.com/ruscoe/DRPG
 
 ## License
 
-All code is released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
+Assets listed in the Credits section of this document are licensed according to their own documentation.
 
-Assets listed in the Credits section are licensed according to their own documentation.
+Code and all other assets are released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
