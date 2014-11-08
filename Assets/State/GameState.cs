@@ -11,7 +11,7 @@ public class GameState : MonoBehaviour
 	public int roomId;
 	public ContainerProp containerPrefab;
 
-	private Player player;
+	public Player player;
 
 	private List<EventModel> events = new List<EventModel>();
 
