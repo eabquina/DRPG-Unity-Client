@@ -17,6 +17,7 @@ public class ContainerProp : InteractiveProp
 				this.guiPrefab.transform.position,
 				this.guiPrefab.transform.rotation);
 
+			gui.type = ItemSlotTypeConstants.ITEM_CONTAINER;
 			gui.SetItems(this.itemContainer.items);
 		}
 		else
