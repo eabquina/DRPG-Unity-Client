@@ -44,7 +44,7 @@ public class ItemSlotGUI : GUI
 			this.gameState.player.AddInventoryItem(this.item);
 
 			List<string> arguments = new List<string>();
-			arguments.Add("avatar");
+			arguments.Add("drpg_avatar");
 			arguments.Add(this.gameState.player.AvatarId.ToString());
 			arguments.Add(this.itemInstance.item_instance_id.ToString());
 
