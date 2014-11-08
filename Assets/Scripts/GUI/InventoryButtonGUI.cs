@@ -20,7 +20,7 @@ public class InventoryButtonGUI : GUI
 
 		if (inventoryItems.Count != 0)
 		{
-			gui.SetItems(inventoryItems.ToArray());
+			gui.SetItems(inventoryItems);
 		}
 	}
 }
