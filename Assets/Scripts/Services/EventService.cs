@@ -9,16 +9,23 @@ public class EventService : WebService
 	{
 		if (events.Count > 0)
 		{
-			Debug.Log("Sending " + events.Count + " events.");
+			if (PlayerPrefs.GetInt("offline") == 0)
+			{
+				Debug.Log("Sending " + events.Count + " events.");
 
-			string eventsString = JsonMapper.ToJson(events);
+				string eventsString = JsonMapper.ToJson(events);
 
-			Dictionary<string, string> parameters = new Dictionary<string, string>();
-			parameters.Add("events", eventsString);
+				Dictionary<string, string> parameters = new Dictionary<string, string>();
+				parameters.Add("events", eventsString);
 
-			Debug.Log(eventsString);
+				Debug.Log(eventsString);
 
-			this.MakeRequest(server + "drpg/process/events", parameters);
+				this.MakeRequest(server + "drpg/process/events", parameters);
+			}
+			else
+			{
+				Debug.Log(events.Count + " game events not sent in offline mode.");
+			}
 		}
 	}
 	
