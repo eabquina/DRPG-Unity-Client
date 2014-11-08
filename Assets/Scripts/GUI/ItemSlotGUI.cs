@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ItemSlotGUI : GUI
 {
 	public TextMesh nameLabel;
 
 	public string type;
-	
+
+	private ItemInstanceModel itemInstance;
 	private ItemModel item;
 
 	private GameState gameState;
@@ -15,6 +17,11 @@ public class ItemSlotGUI : GUI
 	{
 		GameObject gameState = GameObject.FindGameObjectWithTag("GameState");
 		this.gameState = (GameState) gameState.GetComponent("GameState");
+	}
+
+	public void SetItemInstance(ItemInstanceModel itemInstance)
+	{
+		this.itemInstance = itemInstance;
 	}
 
 	public void SetItem(ItemModel item)
@@ -35,6 +42,13 @@ public class ItemSlotGUI : GUI
 		else if (this.type == ItemSlotTypeConstants.ITEM_CONTAINER)
 		{
 			this.gameState.player.AddInventoryItem(this.item);
+
+			List<string> arguments = new List<string>();
+			arguments.Add("avatar");
+			arguments.Add(this.gameState.player.AvatarId.ToString());
+			arguments.Add(this.itemInstance.item_instance_id.ToString());
+
+			this.gameState.CreateEvent("drpg_inventory_add_item_event", arguments);
 
 			GameObject.Destroy(this.gameObject);
 		}
