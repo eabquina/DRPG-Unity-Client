@@ -11,7 +11,7 @@ public class TitleSpawnObject : MonoBehaviour
 	private float minY = 0;
 	private float maxY = 0;
 
-	private float spawnDelay = 0.6f;
+	private float spawnDelay = 0.5f;
 
 	private float tDelta = 0;
 
