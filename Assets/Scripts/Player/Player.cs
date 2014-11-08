@@ -44,6 +44,11 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	public List<ItemModel> GetInventoryItems()
+	{
+		return this.inventoryItems;
+	}
+
 	public void AddInventoryItem(ItemModel item)
 	{
 		this.inventoryItems.Add(item);
