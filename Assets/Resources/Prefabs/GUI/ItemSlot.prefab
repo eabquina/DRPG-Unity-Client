@@ -89,7 +89,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Size: {x: 5, y: .25}
-  m_Center: {x: 5, y: 0}
+  m_Center: {x: 2.5, y: 0}
 --- !u!102 &10200000
 TextMesh:
   serializedVersion: 3
