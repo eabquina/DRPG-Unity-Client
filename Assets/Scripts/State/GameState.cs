@@ -35,6 +35,7 @@ public class GameState : MonoBehaviour
 
 			if (avatar != null)
 			{
+				this.player.AvatarId = avatar.avatar_id;
 				this.player.Name = avatar.label;
 				this.player.XP = avatar.GetAttributeValue("xp");
 				this.player.HP = avatar.GetAttributeValue("hp");
