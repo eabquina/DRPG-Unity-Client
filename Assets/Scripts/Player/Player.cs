@@ -8,11 +8,18 @@ public class Player : MonoBehaviour
 
 	public event UpdateEventHandler UpdateEvent;
 
+	private int avatarId;
 	private string name;
 	private int xp;
 	private int hp;
 
 	private List<ItemModel> inventoryItems = new List<ItemModel>();
+
+	public int AvatarId
+	{
+		get { return this.avatarId; }
+		set { this.avatarId = value; }
+	}
 
 	public string Name
 	{
