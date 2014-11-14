@@ -53,6 +53,14 @@ public class GameState : MonoBehaviour
 		}
 	}
 
+	void Update()
+	{
+		if (Input.GetKey("escape"))
+		{
+			Application.LoadLevel("TitleScene");
+		}
+	}
+
 	public void CreateEvent(string method, List<string> arguments)
 	{
 		EventModel eventModel = new EventModel();
