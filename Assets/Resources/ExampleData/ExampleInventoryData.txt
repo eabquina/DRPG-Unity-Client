@@ -1,0 +1,28 @@
+{
+    "success": true,
+    "timestamp": 1415924135,
+    "inventory": {
+        "items": [
+            {
+                "item_id": 2,
+                "label": "Wooden Bow",
+                "rarity": 3,
+                "equippable": 0,
+                "created": 1414222757,
+                "updated": 1414222757,
+                "rdf_mapping": []
+            }
+        ],
+        "item_instances": [
+            {
+                "inventory_item_id": 1,
+                "type": "drpg_avatar",
+                "entity_id": 1,
+                "created": 1415922642,
+                "updated": 1415922642,
+                "item_id": 2,
+                "rdf_mapping": []
+            }
+        ]
+    }
+}
