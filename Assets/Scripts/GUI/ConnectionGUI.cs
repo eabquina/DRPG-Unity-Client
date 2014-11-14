@@ -68,6 +68,11 @@ public class ConnectionGUI : MonoBehaviour
 			this.PlayOffline();
 		}
 
+		if (GUILayout.Button("Quit"))
+		{
+			this.Quit();
+		}
+
 		GUILayout.EndVertical();
 
 		GUILayout.EndArea();
@@ -91,6 +96,11 @@ public class ConnectionGUI : MonoBehaviour
 		PlayerPrefs.SetInt("offline", 1);
 
 		Application.LoadLevel("LoadScene");
+	}
+
+	void Quit()
+	{
+		Application.Quit();
 	}
 
 	void HandleConnectionSuccess(WWW webRequest)
