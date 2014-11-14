@@ -12,6 +12,7 @@ A Unity client for the [Drupal Role Playing Game](https://github.com/ruscoe/DRPG
 ### Models
 
 - [Simple Jail Door by Anonymous](http://opengameart.org/content/simple-jail-door)
+- [Low Poly Dungeon Items by sakuyo](http://opengameart.org/content/low-poly-dungeon-items)
 
 ### Fonts
 
