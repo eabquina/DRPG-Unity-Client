@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
 
 	private List<ItemModel> inventoryItems = new List<ItemModel>();
 
+	private InventoryService inventoryService;
+
 	public int AvatarId
 	{
 		get { return this.avatarId; }
@@ -51,6 +53,14 @@ public class Player : MonoBehaviour
 		}
 	}
 
+	void Start()
+	{
+		this.inventoryService = (InventoryService) this.gameObject.GetComponent("InventoryService");
+		this.inventoryService.successResponseHandler = new WebService.SuccessResponseHandler(this.PopulateInventory);
+
+		this.inventoryService.GetInventory("drpg_avatar", this.avatarId);
+	}
+
 	public List<ItemModel> GetInventoryItems()
 	{
 		return this.inventoryItems;
@@ -68,6 +78,14 @@ public class Player : MonoBehaviour
 		if (UpdateEvent != null)
 		{
 			UpdateEvent(this, new PlayerEventArgs(this.name, this.xp, this.hp));
+		}
+	}
+
+	private void PopulateInventory(WWW webRequest)
+	{
+		for (int i = 0; i < this.inventoryService.inventory.items.Length; i++)
+		{
+			this.AddInventoryItem(this.inventoryService.inventory.items[i]);
 		}
 	}
 }
