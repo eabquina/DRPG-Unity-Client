@@ -1,6 +1,6 @@
 # DRPG Unity Client
 
-A Unity client for the [Drupal Role Playing Game](https://github.com/ruscoe/DRPG) (DRPG) module.
+A Unity client for the [Drupal Role Playing Game](https://www.drupal.org/sandbox/ruscoe/2331835) (DRPG) module.
 
 ## Credits
 
