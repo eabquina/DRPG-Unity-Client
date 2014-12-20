@@ -12,6 +12,8 @@ public class ConnectionGUI : MonoBehaviour
 
 	void Awake()
 	{
+		Screen.showCursor = true;
+
 		if (PlayerPrefs.HasKey("server"))
 		{
 			this.server = PlayerPrefs.GetString("server");
