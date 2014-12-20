@@ -2,6 +2,8 @@
 
 A Unity client for the [Drupal Role Playing Game](https://www.drupal.org/sandbox/ruscoe/2331835) (DRPG) module.
 
+![DRPG Unity Client screen shot](http://ruscoe.org/assets/images/projects/software/drpg-unity-client.png)
+
 ## Directions
 
 * Build using [Unity](http://unity3d.com/)
