@@ -7,7 +7,7 @@ A Unity client for the [Drupal Role Playing Game](https://www.drupal.org/project
 ## Directions
 
 * Build using [Unity](http://unity3d.com/)
-* Set up a [Drupal](https://www.drupal.org/) instance with the [DRPG module](https://www.drupal.org/sandbox/ruscoe/2331835) installed
+* Set up a [Drupal](https://www.drupal.org/) instance with the [DRPG module](https://www.drupal.org/project/drpg) installed
 * At the title screen, enter the URL of your Drupal instance and your login credentials
 * Connect and play
 
