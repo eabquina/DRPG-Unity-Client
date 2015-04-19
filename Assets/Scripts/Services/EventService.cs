@@ -43,7 +43,11 @@ public class EventService : WebService
 		}
 		else
 		{
-			this.failureResponseHandler(webRequest);
+			if (this.failureResponseHandler != null) {
+				this.failureResponseHandler(webRequest);
+			}
+
+			this.HandleFailure(webRequest);
 		}
 	}
 	
