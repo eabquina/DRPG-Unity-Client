@@ -13,7 +13,7 @@ public class Cursor : MonoBehaviour
 	
 	void Awake()
 	{
-		Screen.showCursor = false;
+		UnityEngine.Cursor.visible = false;
 		
 		this.raycastLayerMask = 1 << LayerMask.NameToLayer("UI");
 	}

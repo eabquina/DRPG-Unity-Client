@@ -12,7 +12,7 @@ public class ConnectionGUI : MonoBehaviour
 
 	void Awake()
 	{
-		Screen.showCursor = true;
+		UnityEngine.Cursor.visible = true;
 
 		if (PlayerPrefs.HasKey("server"))
 		{
